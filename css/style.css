@@ -177,41 +177,41 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.about {
+.section-about {
   background-color: #f7f7f7;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   position: relative;
   height: 140vh;
   top: -20vh;
   z-index: 9; }
-  .about .container {
+  .section-about .container {
     position: relative;
     top: 45%;
     transform: translateY(-50%); }
-  .about__content-box {
+  .section-about .about__content-box {
     flex: 50%; }
-  .about__text {
+  .section-about .about__text {
     margin-bottom: 3.6rem; }
-  .about__img-box {
+  .section-about .about__img-box {
     position: relative; }
-  .about .about__img {
+  .section-about .about__img {
     position: absolute;
     display: block;
     width: 55%;
     transition: all 0.3s;
     box-shadow: 0 0 2.4rem 1rem rgba(0, 0, 0, 0.15); }
-    .about .about__img:hover {
+    .section-about .about__img:hover {
       transform: scale(1.1);
       z-index: 10;
       outline: solid 1rem #55c57a;
       outline-offset: 1rem;
       box-shadow: 0 0 4.8rem 1rem rgba(0, 0, 0, 0.3); }
-    .about .about__img--1 {
+    .section-about .about__img--1 {
       top: 0;
       left: 0; }
-    .about .about__img--2 {
+    .section-about .about__img--2 {
       top: 15%;
       right: 0; }
-    .about .about__img--3 {
+    .section-about .about__img--3 {
       bottom: 0;
       left: 15%; }
