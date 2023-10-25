@@ -7,6 +7,10 @@ Dark green: #28b485
 
 */
 
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
 * {
   padding: 0;
   margin: 0;
@@ -30,8 +34,8 @@ body {
 .header {
   background-image: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgb(40, 180, 133, 0.8)
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
     url("../img/hero.jpg");
   background-size: cover;
@@ -63,14 +67,14 @@ body {
   text-align: center;
 }
 
-.header__heading-primary {
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6.4rem;
 }
 
-.header__heading-primary--main {
+.heading-primary--main {
   display: block;
   font-size: 6.4rem;
   font-weight: 400;
@@ -79,7 +83,7 @@ body {
   animation: moveInLeft 1s ease-out;
 }
 
-.header__heading-primary--sub {
+.heading-primary--sub {
   display: block;
   font-size: 2.4rem;
   font-weight: 700;
