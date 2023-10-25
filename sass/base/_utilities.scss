@@ -1,0 +1,25 @@
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+// Flex
+.flex {
+  display: flex;
+}
+
+.flex-gap--sm {
+  gap: 3.6rem;
+}
+
+.flex-gap--md {
+  gap: 6.4rem;
+}
+
+.flex-gap--lg {
+  gap: 9.6rem;
+}
+
+.flex--col {
+  flex-direction: column;
+}
