@@ -266,17 +266,20 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  clip-path: polygon(0 0, 100% 0, 100% 115vh, 0 100%);
+  margin-top: -20vh;
   position: relative;
-  padding: 25rem 0;
-  z-index: 9999; }
+  padding: 20rem 0 30rem 0;
+  z-index: 90; }
 
 .section-features {
   z-index: 7;
-  margin-top: -19vh;
   position: relative;
+  z-index: 100;
+  margin-top: -14vh;
   padding: 25rem 0;
-  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+  transform: skewY(-7deg);
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
   background-position: top left; }
+  .section-features > * {
+    transform: skewY(7deg); }
