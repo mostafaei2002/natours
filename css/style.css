@@ -225,6 +225,23 @@ body {
       bottom: 0;
       left: 15%; }
 
+.feature-card {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  padding: 3.2rem 1.6rem;
+  transition: all 0.3s;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1); }
+  .feature-card:hover {
+    transform: scale(1.05) translateY(-2rem);
+    box-shadow: 0 2.4rem 3.6rem rgba(0, 0, 0, 0.2); }
+  .feature-card__icon {
+    display: inline-block;
+    font-size: 6.4rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+
 .header {
   z-index: 100;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -263,19 +280,3 @@ body {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
   background-position: top left; }
-  .section-features .feature__card {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 4px;
-    padding: 3.2rem 1.6rem;
-    transition: all 0.3s;
-    box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1); }
-    .section-features .feature__card:hover {
-      transform: scale(1.05) translateY(-2rem);
-      box-shadow: 0 2.4rem 3.6rem rgba(0, 0, 0, 0.2); }
-  .section-features .feature__icon {
-    display: inline-block;
-    font-size: 6.4rem;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
