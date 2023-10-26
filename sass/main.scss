@@ -13,9 +13,16 @@
 @import "components/button";
 @import "components/composition";
 @import "components/feature-card";
+@import "components/card";
 
 // Layout
 @import "layout/header";
 
 // Pages
 @import "pages/home";
+
+.section-tours {
+  background-color: $color-gray-light-1;
+  margin-top: -15vh;
+  padding: 25rem 0 15rem 0;
+}
