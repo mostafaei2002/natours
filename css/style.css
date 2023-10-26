@@ -349,22 +349,47 @@ body {
     margin-bottom: 6.4rem; }
 
 .story {
-  padding: 4.8rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4.8rem 9.6rem 4.8rem 9.6rem;
   width: 80%;
   margin: 0 auto;
+  background-color: #f7f7f7;
   clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%); }
+  .story:not(:last-child) {
+    margin-bottom: 9.6rem; }
   .story::after {
     content: "";
     clear: both;
     display: table; }
-  .story__img {
-    width: 24rem;
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    transition: all 0.4s;
     float: left;
-    clip-path: circle();
-    transition: all 0.4s; }
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transition: all 0.4s;
+    transform: scale(1.4) translateX(-3rem); }
+  .story__author {
+    position: absolute;
+    bottom: -10%;
+    left: 57%;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    color: #fff;
+    transition: all 0.8s;
+    text-transform: uppercase; }
+  .story__text {
+    transform: translateX(2rem); }
+  .story:hover .story__author {
+    top: 57%;
+    transform: translate(-50%, -50%);
+    opacity: 1; }
   .story:hover .story__img {
-    filter: blur(4px); }
+    filter: blur(4px);
+    transform: scale(1) translateX(-3.5rem); }
 
 .header {
   z-index: 100;
@@ -414,5 +439,4 @@ body {
   padding: 25rem 0 15rem 0; }
 
 .section-stories {
-  padding: 16rem 0;
-  background-color: red; }
+  padding: 16rem 0; }
