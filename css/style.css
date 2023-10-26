@@ -109,10 +109,19 @@ body {
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr); }
 
-.grid-col-gap--6 {
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr); }
+
+.grid-cg-sm {
+  column-gap: 1.6rem; }
+
+.grid-cg-md {
+  column-gap: 4.8rem; }
+
+.grid-cg-lg-1 {
   column-gap: 6.4rem; }
 
-.grid-col-gap--9 {
+.grid-cg-lg-2 {
   column-gap: 9.6rem; }
 
 .u-center-text {
@@ -217,7 +226,7 @@ body {
       left: 15%; }
 
 .header {
-  z-index: 10;
+  z-index: 100;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
@@ -240,7 +249,33 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 115vh, 0 100%);
+  position: relative;
   padding: 25rem 0;
-  margin-top: -20vh;
-  z-index: 9; }
+  z-index: 9999; }
+
+.section-features {
+  z-index: 7;
+  margin-top: -19vh;
+  position: relative;
+  padding: 25rem 0;
+  clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top left; }
+  .section-features .feature__card {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    padding: 3.2rem 1.6rem;
+    transition: all 0.3s;
+    box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1); }
+    .section-features .feature__card:hover {
+      transform: scale(1.05) translateY(-2rem);
+      box-shadow: 0 2.4rem 3.6rem rgba(0, 0, 0, 0.2); }
+  .section-features .feature__icon {
+    display: inline-block;
+    font-size: 6.4rem;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
