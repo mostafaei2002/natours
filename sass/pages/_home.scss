@@ -1,24 +1,13 @@
 .section-about {
-  background-color: $color-gray-light;
+  background-color: $color-gray-light-1;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-  position: relative;
-  height: 140vh;
-  top: -20vh;
+  padding: 25rem 0;
+  margin-top: -20vh;
   z-index: 9;
-
-  .container {
-    position: relative;
-    top: 45%;
-    transform: translateY(-50%);
-  }
 
   .about__content-box {
     flex: 50%;
-  }
-
-  .about__text {
-    margin-bottom: 3.6rem;
   }
 
   .about__img-box {

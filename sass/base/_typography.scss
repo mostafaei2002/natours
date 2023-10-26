@@ -34,9 +34,9 @@ body {
 .heading-secondary {
   font-size: 3.6rem;
   font-weight: 700;
+  text-transform: uppercase;
 
   text-align: center;
-  margin-bottom: 6.4rem;
 
   background-image: linear-gradient(
     to right,
@@ -45,9 +45,19 @@ body {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .heading-tertiary {
   font-size: 1.6rem;
-  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
 }

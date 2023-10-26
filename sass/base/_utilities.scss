@@ -23,3 +23,44 @@
 .flex--col {
   flex-direction: column;
 }
+
+// Grids
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-col-gap--6 {
+  column-gap: 6.4rem;
+}
+
+.grid-col-gap--9 {
+  column-gap: 9.6rem;
+}
+
+// Center Text
+
+.u-center-text {
+  text-align: center;
+}
+
+// margins
+
+.u-mb-sm {
+  margin-bottom: 1.6rem;
+}
+
+.u-mb-md {
+  margin-bottom: 3.6rem;
+}
+
+.u-mb-lg-1 {
+  margin-bottom: 6.4rem;
+}
+
+.u-mb-lg-2 {
+  margin-bottom: 9.6rem;
+}
