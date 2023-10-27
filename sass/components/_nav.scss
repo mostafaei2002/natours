@@ -18,6 +18,17 @@
     display: inline-block;
     position: relative;
     box-shadow: 0 1.6rem 1.6rem rgba($color-black, 0.1);
+
+    &:hover .navigation__icon {
+      &::before {
+        height: 2px;
+        transform: translateY(-1.2rem);
+      }
+      &::after {
+        height: 2px;
+        transform: translateY(1.2rem);
+      }
+    }
   }
 
   &__icon {
@@ -29,11 +40,11 @@
     &::after {
       position: absolute;
       z-index: inherit;
-      width: 3rem;
+      width: 3.5rem;
       height: 1.5px;
       background-color: $color-gray-dark-1;
       display: inline-block;
-      transition: transform 0.5s;
+      transition: transform 0.2s;
     }
     &::before {
       content: "";
@@ -53,10 +64,12 @@
 
     &::before {
       transform: rotate(-45deg);
+      height: 3px;
     }
 
     &::after {
       transform: rotate(45deg);
+      height: 3px;
     }
   }
 }

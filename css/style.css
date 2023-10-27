@@ -494,6 +494,12 @@ body {
     display: inline-block;
     position: relative;
     box-shadow: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.1); }
+    .navigation__label:hover .navigation__icon::before {
+      height: 2px;
+      transform: translateY(-1.2rem); }
+    .navigation__label:hover .navigation__icon::after {
+      height: 2px;
+      transform: translateY(1.2rem); }
   .navigation__icon {
     top: 50%;
     left: 50%;
@@ -501,11 +507,11 @@ body {
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
       position: absolute;
       z-index: inherit;
-      width: 3rem;
+      width: 3.5rem;
       height: 1.5px;
       background-color: #333;
       display: inline-block;
-      transition: transform 0.5s; }
+      transition: transform 0.2s; }
     .navigation__icon::before {
       content: "";
       transform: translateY(-1rem); }
@@ -515,9 +521,11 @@ body {
   .navigation__btn:checked + .navigation__label .navigation__icon {
     background-color: transparent; }
   .navigation__btn:checked + .navigation__label .navigation__icon::before {
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    height: 3px; }
   .navigation__btn:checked + .navigation__label .navigation__icon::after {
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    height: 3px; }
 
 .nav {
   position: fixed;
