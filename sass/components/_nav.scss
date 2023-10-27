@@ -1,0 +1,56 @@
+.navigation {
+  position: fixed;
+  top: 6.4rem;
+  right: 6.4rem;
+  z-index: 1000;
+
+  &__btn {
+    position: relative;
+    display: none;
+  }
+
+  &__label {
+    background-color: white;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    z-index: inherit;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 1.6rem 1.6rem rgba($color-black, 0.1);
+  }
+
+  &__icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &,
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: inherit;
+      width: 3rem;
+      height: 1.5px;
+      background-color: $color-gray-dark-1;
+      display: inline-block;
+    }
+
+    &::after {
+      content: "";
+      transform: translateY(-1rem);
+    }
+
+    &::before {
+      content: "";
+      transform: translateY(1rem);
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}

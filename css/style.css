@@ -477,6 +477,48 @@ body {
       border-radius: 50%;
       background-color: #55c57a; }
 
+.navigation {
+  position: fixed;
+  top: 6.4rem;
+  right: 6.4rem;
+  z-index: 1000; }
+  .navigation__btn {
+    position: relative;
+    display: none; }
+  .navigation__label {
+    background-color: white;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    z-index: inherit;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.1); }
+  .navigation__icon {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      position: absolute;
+      z-index: inherit;
+      width: 3rem;
+      height: 1.5px;
+      background-color: #333;
+      display: inline-block; }
+    .navigation__icon::after {
+      content: "";
+      transform: translateY(-1rem); }
+    .navigation__icon::before {
+      content: "";
+      transform: translateY(1rem); }
+
+.nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0; }
+
 .header {
   z-index: 100;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
