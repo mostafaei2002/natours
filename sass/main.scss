@@ -16,9 +16,19 @@
 @import "components/card";
 @import "components/story";
 @import "components/bg-video";
+@import "components/form";
 
 // Layout
 @import "layout/header";
 
 // Pages
 @import "pages/home";
+
+.section-form {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}

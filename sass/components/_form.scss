@@ -1,0 +1,91 @@
+.form__box {
+  background-image: url("../../img/nat-10.jpg");
+  height: 50rem;
+  background-size: cover;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 2.4rem 5rem rgba($color-black, 0.2);
+  width: 100%;
+}
+
+.form {
+  padding: 4.8rem 6.4rem;
+  background-color: rgba($color-white, 0.9);
+  width: 55%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+
+  &__group {
+    position: relative;
+    width: 75%;
+
+    &:not(:last-child) {
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  &__input {
+    padding: 1.6rem;
+    border: none;
+    display: block;
+    width: 100%;
+
+    &::placeholder {
+      color: #aaa;
+      font-size: 1.4rem;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding-left: 2.4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 0.4s;
+    }
+
+    &:not(:placeholder-shown) + &-label {
+      transform: translateY(160%);
+      opacity: 1;
+    }
+  }
+
+  &__group-radio {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__radio {
+    appearance: none;
+    border: 2px solid $color-primary;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+
+    &:checked::after {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+
+      background-color: $color-primary;
+    }
+  }
+}
