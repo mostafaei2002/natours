@@ -504,13 +504,20 @@ body {
       width: 3rem;
       height: 1.5px;
       background-color: #333;
-      display: inline-block; }
-    .navigation__icon::after {
-      content: "";
-      transform: translateY(-1rem); }
+      display: inline-block;
+      transition: transform 0.5s; }
     .navigation__icon::before {
       content: "";
+      transform: translateY(-1rem); }
+    .navigation__icon::after {
+      content: "";
       transform: translateY(1rem); }
+  .navigation__btn:checked + .navigation__label .navigation__icon {
+    background-color: transparent; }
+  .navigation__btn:checked + .navigation__label .navigation__icon::before {
+    transform: rotate(-45deg); }
+  .navigation__btn:checked + .navigation__label .navigation__icon::after {
+    transform: rotate(45deg); }
 
 .nav {
   position: fixed;

@@ -33,16 +33,30 @@
       height: 1.5px;
       background-color: $color-gray-dark-1;
       display: inline-block;
+      transition: transform 0.5s;
     }
-
-    &::after {
+    &::before {
       content: "";
       transform: translateY(-1rem);
     }
 
-    &::before {
+    &::after {
       content: "";
       transform: translateY(1rem);
+    }
+  }
+
+  &__btn:checked + &__label &__icon {
+    & {
+      background-color: transparent;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
     }
   }
 }
