@@ -353,7 +353,8 @@ body {
   width: 80%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
-  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%); }
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+  border-radius: 3px; }
   .story:not(:last-child) {
     margin-bottom: 9.6rem; }
   .story::after {
@@ -440,7 +441,7 @@ body {
 
 .section-stories {
   position: relative;
-  padding: 9.6rem 0; }
+  padding: 15rem 0; }
   .section-stories .bg-video {
     position: absolute;
     z-index: -1;
