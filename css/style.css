@@ -160,7 +160,8 @@ body {
   text-transform: uppercase;
   transition: all 0.2s;
   font-size: 1.6rem;
-  font-weight: 400; }
+  font-weight: 400;
+  cursor: pointer; }
   .btn:link, .btn:visited {
     text-decoration: none; }
   .btn--white {
@@ -424,16 +425,22 @@ body {
     .form__group:not(:last-child) {
       margin-bottom: 4.8rem; }
   .form__input {
-    padding: 1.6rem;
+    padding: 1.6rem 2.4rem;
+    font-size: 1.6rem;
+    font-family: inherit;
     border: none;
     display: block;
-    width: 100%; }
+    color: inherit;
+    width: 100%;
+    border-radius: 2px;
+    border-bottom: 3px solid transparent; }
     .form__input::placeholder {
-      color: #aaa;
+      color: #999;
       font-size: 1.4rem; }
     .form__input:focus {
       outline: none;
-      border-bottom: 3px solid #55c57a; }
+      border-bottom: 3px solid #55c57a;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
     .form__input:focus:invalid {
       border-bottom: 3px solid #ff7730; }
     .form__input-label {
