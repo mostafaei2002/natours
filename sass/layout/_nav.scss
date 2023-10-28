@@ -1,23 +1,40 @@
 .navigation {
-  position: fixed;
-  top: 6.4rem;
-  right: 6.4rem;
-  z-index: 1000;
-
-  &__btn {
-    position: relative;
+  &__checkbox {
     display: none;
   }
 
-  &__label {
-    background-color: white;
+  &__background {
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 1000;
+
+    transition: all 0.8s ease-in;
+  }
+
+  &__btn {
+    background-color: $color-white;
+
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    z-index: inherit;
     display: inline-block;
-    position: relative;
     box-shadow: 0 1.6rem 1.6rem rgba($color-black, 0.1);
+
+    top: 6.5rem;
+    right: 6.5rem;
+
+    position: fixed;
+    z-index: 2000;
 
     &:hover .navigation__icon {
       &::before {
@@ -57,7 +74,7 @@
     }
   }
 
-  &__btn:checked + &__label &__icon {
+  &__checkbox:checked + &__label &__icon {
     & {
       background-color: transparent;
     }
@@ -72,19 +89,23 @@
       height: 3px;
     }
   }
-}
 
-.nav {
-  animation: navClose 0.4s ease-out 0.4s;
-  animation-fill-mode: forwards;
+  &__nav {
+    position: fixed;
+    left: 0;
+    top: 0;
 
-  background-color: $color-primary-dark;
-  position: fixed;
-  left: 0;
-  top: 0;
+    width: 0;
+    height: 100vh;
 
-  width: 100vw;
-  height: 100vh;
+    z-index: 1500;
+
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
 
   &__list {
     position: absolute;
@@ -108,23 +129,47 @@
       font-weight: 300;
 
       display: inline-block;
-      padding: 1.6rem 3.2rem;
+      padding: 1rem 1rem;
+
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 60%,
+        $color-white 60%
+      );
+      background-size: 300%;
+
+      transition: all 0.4s;
 
       span {
         margin-right: 1.2rem;
       }
     }
-  }
-}
 
-.navigation__btn:checked {
-  & ~ .nav {
-    animation: navOpen 0.4s ease-in;
-    animation-fill-mode: backwards;
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
   }
 
-  & ~ .nav .nav__link {
-    animation: navMoveIn 0.4s ease-out 0.4s;
-    animation-fill-mode: backwards;
+  &__checkbox:checked {
+    & ~ .navigation__nav {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+
+      width: 100%;
+    }
+
+    & ~ .navigation__nav .navigation__link {
+      animation: navMoveIn 0.4s ease-out 0.4s;
+      animation-fill-mode: backwards;
+    }
+
+    & ~ .navigation__background {
+      transform: scale(50);
+    }
   }
 }
