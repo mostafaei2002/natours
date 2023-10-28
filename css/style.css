@@ -477,6 +477,38 @@ body {
       border-radius: 50%;
       background-color: #55c57a; }
 
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .modal__box {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 900;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    display: flex; }
+  .modal__img-box {
+    flex-basis: 35%;
+    flex-shrink: 0; }
+  .modal__img {
+    display: block;
+    width: 100%; }
+  .modal__text-box {
+    padding: 4.8rem; }
+  .modal__text {
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 3.6rem;
+    column-rule: 1px solid #eee;
+    hyphens: auto; }
+
 .header {
   z-index: 100;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
