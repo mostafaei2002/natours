@@ -14,18 +14,18 @@
     border-radius: 50%;
 
     position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
+    top: 6.7rem;
+    right: 6.7rem;
     z-index: 1000;
 
-    transition: all 0.8s ease-in;
+    transition: all 0.8s ease-out;
   }
 
   &__btn {
     background-color: $color-white;
 
-    width: 7rem;
-    height: 7rem;
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 1.6rem 1.6rem rgba($color-black, 0.1);
@@ -74,18 +74,18 @@
     }
   }
 
-  &__checkbox:checked + &__label &__icon {
+  &__checkbox:checked + &__btn &__icon {
     & {
       background-color: transparent;
     }
 
     &::before {
-      transform: rotate(45deg);
+      transform: rotate(180-45deg);
       height: 3px;
     }
 
     &::after {
-      transform: rotate(-45deg);
+      transform: rotate(-180+45deg);
       height: 3px;
     }
   }

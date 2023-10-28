@@ -540,15 +540,15 @@ body {
   height: 6.5rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 6.7rem;
+  right: 6.7rem;
   z-index: 1000;
-  transition: all 0.8s ease-in; }
+  transition: all 0.8s ease-out; }
 
 .navigation__btn {
   background-color: #fff;
-  width: 7rem;
-  height: 7rem;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
   display: inline-block;
   box-shadow: 0 1.6rem 1.6rem rgba(0, 0, 0, 0.1);
@@ -582,15 +582,15 @@ body {
     content: "";
     transform: translateY(1rem); }
 
-.navigation__checkbox:checked + .navigation__label .navigation__icon {
+.navigation__checkbox:checked + .navigation__btn .navigation__icon {
   background-color: transparent; }
 
-.navigation__checkbox:checked + .navigation__label .navigation__icon::before {
-  transform: rotate(45deg);
+.navigation__checkbox:checked + .navigation__btn .navigation__icon::before {
+  transform: rotate(135deg);
   height: 3px; }
 
-.navigation__checkbox:checked + .navigation__label .navigation__icon::after {
-  transform: rotate(-45deg);
+.navigation__checkbox:checked + .navigation__btn .navigation__icon::after {
+  transform: rotate(-135deg);
   height: 3px; }
 
 .navigation__nav {
