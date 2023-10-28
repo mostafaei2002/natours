@@ -26,6 +26,40 @@
     opacity: 1;
     transform: translateX(0); } }
 
+@keyframes navOpen {
+  0% {
+    clip-path: circle(0 at 92.5% 14%);
+    display: block; }
+  100% {
+    clip-path: circle(150% at 92.5% 14%); } }
+
+@keyframes navClose {
+  0% {
+    clip-path: circle(150% at 92.5% 14%); }
+  100% {
+    clip-path: circle(0 at 92.5% 14%);
+    display: none; } }
+
+@keyframes navMoveIn {
+  0% {
+    transform: translateX(-40rem);
+    opacity: 0; }
+  60% {
+    transform: translateX(10rem); }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes navMoveOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1; }
+  40% {
+    transform: translateX(10rem); }
+  100% {
+    transform: translateX(-40rem);
+    opacity: 0; } }
+
 * {
   padding: 0;
   margin: 0;
@@ -521,18 +555,49 @@ body {
   .navigation__btn:checked + .navigation__label .navigation__icon {
     background-color: transparent; }
   .navigation__btn:checked + .navigation__label .navigation__icon::before {
-    transform: rotate(-45deg);
+    transform: rotate(45deg);
     height: 3px; }
   .navigation__btn:checked + .navigation__label .navigation__icon::after {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
     height: 3px; }
 
 .nav {
+  animation: navClose 0.4s ease-out 0.4s;
+  animation-fill-mode: forwards;
+  background-color: #28b485;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
   left: 0;
-  top: 0; }
+  top: 0;
+  width: 100vw;
+  height: 100vh; }
+  .nav__list {
+    position: absolute;
+    list-style: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .nav__link {
+    animation: navMoveOut 0.4s ease-in;
+    animation-fill-mode: forwards; }
+    .nav__link:link, .nav__link:visited {
+      text-decoration: none;
+      color: #fff;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      display: inline-block;
+      padding: 1.6rem 3.2rem; }
+      .nav__link:link span, .nav__link:visited span {
+        margin-right: 1.2rem; }
+
+.navigation__btn:checked ~ .nav {
+  animation: navOpen 0.4s ease-in;
+  animation-fill-mode: backwards; }
+
+.navigation__btn:checked ~ .nav .nav__link {
+  animation: navMoveIn 0.4s ease-out 0.4s;
+  animation-fill-mode: backwards; }
 
 .header {
   z-index: 100;

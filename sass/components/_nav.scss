@@ -63,21 +63,68 @@
     }
 
     &::before {
-      transform: rotate(-45deg);
+      transform: rotate(45deg);
       height: 3px;
     }
 
     &::after {
-      transform: rotate(45deg);
+      transform: rotate(-45deg);
       height: 3px;
     }
   }
 }
 
 .nav {
+  animation: navClose 0.4s ease-out 0.4s;
+  animation-fill-mode: forwards;
+
+  background-color: $color-primary-dark;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
   left: 0;
   top: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  &__list {
+    position: absolute;
+
+    list-style: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__link {
+    animation: navMoveOut 0.4s ease-in;
+    animation-fill-mode: forwards;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-white;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 300;
+
+      display: inline-block;
+      padding: 1.6rem 3.2rem;
+
+      span {
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}
+
+.navigation__btn:checked {
+  & ~ .nav {
+    animation: navOpen 0.4s ease-in;
+    animation-fill-mode: backwards;
+  }
+
+  & ~ .nav .nav__link {
+    animation: navMoveIn 0.4s ease-out 0.4s;
+    animation-fill-mode: backwards;
+  }
 }
