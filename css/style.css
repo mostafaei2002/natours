@@ -499,7 +499,9 @@ body {
     left: 50%;
     z-index: 900;
     background-color: #fff;
-    display: flex; }
+    display: flex;
+    border-radius: 3px;
+    overflow: hidden; }
   .modal__img-box {
     flex-basis: 35%;
     flex-shrink: 0; }
@@ -520,14 +522,17 @@ body {
     height: 2.4rem;
     top: 2.4rem;
     right: 4.8rem; }
+    .modal__close:hover .modal__close-icon::before, .modal__close:hover .modal__close-icon::after {
+      background-color: #28b485; }
   .modal__close-icon::before, .modal__close-icon::after {
     content: "";
     position: absolute;
     width: 2rem;
     height: 2px;
-    background-color: #333;
     top: 50%;
-    left: 50%; }
+    left: 50%;
+    background-color: #333;
+    transition: all 0.3s; }
   .modal__close-icon::before {
     transform: rotate(45deg); }
   .modal__close-icon::after {
