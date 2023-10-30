@@ -24,6 +24,16 @@
       top: 5.2rem;
       right: 5.2rem;
     }
+
+    @include respond(tab-port) {
+      top: 4.2rem;
+      right: 4.2rem;
+    }
+
+    @include respond(phone) {
+      top: 3.2rem;
+      right: 3.2rem;
+    }
   }
 
   &__btn {
@@ -44,6 +54,16 @@
     @include respond(tab-land) {
       top: 5rem;
       right: 5rem;
+    }
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
     }
 
     &:hover .navigation__icon {
@@ -153,6 +173,13 @@
 
       span {
         margin-right: 1.2rem;
+      }
+
+      @include respond(phone) {
+        font-size: 2rem;
+        span {
+          margin-right: 0.5rem;
+        }
       }
     }
 
