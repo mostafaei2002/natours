@@ -772,6 +772,9 @@ body {
   @media (max-width: 56.25em) {
     .grid--4-cols {
       grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 37.5em) {
+    .grid--4-cols {
+      grid-template-columns: 1fr; } }
 
 .grid-cg-sm {
   column-gap: 1.6rem;
