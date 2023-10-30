@@ -6,6 +6,10 @@
   perspective: 150rem;
   position: relative;
 
+  @include respond(tab-port) {
+    width: 40rem;
+  }
+
   &__face {
     z-index: 100;
     box-shadow: 0 1.2rem 2.4rem rgba($color-black, 0.1);

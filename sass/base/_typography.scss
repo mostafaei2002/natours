@@ -46,6 +46,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+
+  @include respond(tab-port) {
+    font-size: 2.4rem;
+  }
 }
 
 .heading-tertiary {
