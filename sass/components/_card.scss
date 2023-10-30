@@ -6,9 +6,9 @@
   perspective: 150rem;
   position: relative;
 
-  @include respond(tab-port) {
-    width: 40rem;
-  }
+  // @include respond(tab-port) {
+  //   width: 40rem;
+  // }
 
   &__face {
     z-index: 100;
