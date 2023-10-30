@@ -1,6 +1,6 @@
 .feature-card {
   text-align: center;
-  background-color: rgba($color-white, 0.6);
+  background-color: rgba($color-white, 0.8);
 
   border-radius: 4px;
 
@@ -23,6 +23,7 @@
       $color-primary-dark
     );
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }

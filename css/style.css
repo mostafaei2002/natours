@@ -33,6 +33,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   padding: 3rem;
@@ -86,7 +95,8 @@ body {
 
 .container {
   max-width: 114rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 2.4rem; }
 
 .flex {
   display: flex; }
@@ -129,6 +139,9 @@ body {
 
 .grid-cg-lg-1 {
   column-gap: 6.4rem; }
+  @media (max-width: 75em) {
+    .grid-cg-lg-1 {
+      column-gap: 2.4rem; } }
 
 .grid-cg-lg-2 {
   column-gap: 9.6rem; }
@@ -244,7 +257,7 @@ body {
 
 .feature-card {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   padding: 3.2rem 1.6rem;
   transition: all 0.3s;
@@ -257,6 +270,7 @@ body {
     font-size: 6.4rem;
     background-image: linear-gradient(to right, #7ed56f, #28b485);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent; }
 
 .card {
@@ -361,6 +375,9 @@ body {
   transform: skewX(-12deg);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 3px; }
+  @media (max-width: 75em) {
+    .story {
+      width: 85%; } }
   .story:not(:last-child) {
     margin-bottom: 9.6rem; }
   .story::after {
@@ -419,6 +436,9 @@ body {
   padding: 4.8rem 6.4rem;
   width: 55%;
   height: 100%; }
+  @media (max-width: 75em) {
+    .form {
+      width: 65%; } }
   .form__group {
     position: relative;
     width: 75%; }
@@ -719,7 +739,7 @@ body {
   background-color: #f7f7f7;
   margin-top: -20vh;
   position: relative;
-  padding: 20rem 0 30rem 0;
+  padding: 25rem 0 30rem 0;
   z-index: 90; }
 
 .section-features {
@@ -755,3 +775,6 @@ body {
     border-radius: 3px;
     box-shadow: 0 2.4rem 5rem rgba(0, 0, 0, 0.2);
     width: 100%; }
+    @media (max-width: 75em) {
+      .section-form .form__box {
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, transparent 55%), url("../../img/nat-10.jpg"); } }

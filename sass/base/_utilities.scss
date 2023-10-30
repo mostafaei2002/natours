@@ -1,6 +1,7 @@
 .container {
   max-width: 114rem;
   margin: 0 auto;
+  padding: 0 2.4rem;
 }
 
 // Flex
@@ -59,6 +60,10 @@
 
 .grid-cg-lg-1 {
   column-gap: 6.4rem;
+
+  @include respond(tab-land) {
+    column-gap: 2.4rem;
+  }
 }
 
 .grid-cg-lg-2 {
