@@ -532,6 +532,9 @@ body {
   position: relative;
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  @media (max-width: 56.25em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
   .header__logo-box {
     position: absolute;
     height: 4rem;
@@ -826,6 +829,9 @@ body {
   @media (max-width: 75em) {
     .section-features {
       padding: 20rem 0; } }
+  @media (max-width: 56.25em) {
+    .section-features {
+      padding: 15rem 0; } }
 
 .section-tours {
   background-color: #f7f7f7;

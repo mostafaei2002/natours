@@ -14,6 +14,10 @@
 
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
   // Header Logo
   &__logo-box {
     position: absolute;
