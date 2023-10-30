@@ -196,6 +196,9 @@ body {
 
 .composition {
   position: relative; }
+  @media (max-width: 56.25em) {
+    .composition {
+      padding-top: 4.8rem; } }
   .composition:hover .composition__img:not(:hover) {
     transform: scale(0.95); }
   .composition__img {
@@ -204,6 +207,11 @@ body {
     width: 55%;
     transition: all 0.3s;
     box-shadow: 0 0 2.4rem 1rem rgba(0, 0, 0, 0.15); }
+    @media (max-width: 56.25em) {
+      .composition__img {
+        position: relative;
+        width: 33%;
+        display: inline-block; } }
     .composition__img:hover {
       transform: scale(1.05) translateY(-5px);
       z-index: 10;
@@ -211,14 +219,28 @@ body {
       outline-offset: 1rem;
       box-shadow: 0 0 4.8rem 1rem rgba(0, 0, 0, 0.3); }
     .composition__img--1 {
-      top: 0;
-      left: 0; }
+      top: -3rem;
+      left: 3rem; }
+      @media (max-width: 56.25em) {
+        .composition__img--1 {
+          transform: scale(1.1); } }
     .composition__img--2 {
       top: 15%;
       right: 0; }
+      @media (max-width: 56.25em) {
+        .composition__img--2 {
+          top: 0;
+          transform: scale(1.3);
+          z-index: 100; } }
     .composition__img--3 {
-      bottom: 0;
+      bottom: 8%;
       left: 15%; }
+      @media (max-width: 56.25em) {
+        .composition__img--3 {
+          top: 2rem;
+          bottom: 0;
+          left: -3rem;
+          transform: scale(1.2); } }
 
 .feature-card {
   text-align: center;
@@ -777,7 +799,7 @@ body {
 
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr); }
-  @media (max-width: 75em) {
+  @media (max-width: 56.25em) {
     .grid--2-cols {
       grid-template-columns: 1fr; } }
 
@@ -836,7 +858,7 @@ body {
   z-index: 90; }
   @media (max-width: 75em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 20rem 0 30rem 0; } }
 
 .section-features {
   position: relative;

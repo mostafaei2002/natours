@@ -41,7 +41,7 @@
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     grid-template-columns: 1fr;
   }
 }
