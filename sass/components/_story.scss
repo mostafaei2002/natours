@@ -12,6 +12,11 @@
     width: 85%;
   }
 
+  @include respond(phone) {
+    transform: skewX(0);
+    padding: 3.2rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 9.6rem;
   }
@@ -34,6 +39,13 @@
     position: relative;
 
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      float: none;
+      transform: skewX(0);
+      margin: 0 auto;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__img {
@@ -60,6 +72,10 @@
 
   &__text {
     transform: translateX(2rem) skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
   &:hover &__author {
     opacity: 1;

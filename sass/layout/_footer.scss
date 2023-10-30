@@ -9,6 +9,10 @@
 
   &__logo {
     max-height: 12rem;
+
+    // @include respond(phone) {
+    //   max-height: 10rem;
+    // }
   }
 
   &__copyright {
@@ -17,17 +21,26 @@
     color: $color-white;
     padding: 1.6rem 1.6rem 0 1.6rem;
     font-size: 1.4rem;
+
+    @include respond(phone) {
+      max-width: 100%;
+      margin-top: 6.4rem;
+    }
   }
 
   &__nav {
     border-top: 1px solid $color-gray-light-1;
-    padding: 1.6rem 1.6rem 0 1.6rem;
+    padding-top: 1.6rem;
   }
 
   &__nav-list {
     list-style: none;
     display: flex;
     gap: 1.2rem;
+
+    @include respond(phone) {
+      gap: 0.6rem;
+    }
   }
 
   &__nav-link {
@@ -38,6 +51,10 @@
       transition: all 0.3s;
       display: inline-block;
       padding: 0.3rem 0.8rem;
+
+      @include respond(phone) {
+        font-size: 1.2rem;
+      }
     }
 
     &:hover {

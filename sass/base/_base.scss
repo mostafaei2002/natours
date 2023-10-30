@@ -24,4 +24,8 @@ body {
   padding: 3rem;
 
   box-sizing: border-box;
+
+  @include respond(phone) {
+    padding: 1rem;
+  }
 }
