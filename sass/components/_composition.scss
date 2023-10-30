@@ -18,7 +18,7 @@
 
     @include respond(tab-port) {
       position: relative;
-      width: 33%;
+      width: 32%;
       display: inline-block;
     }
 
@@ -31,10 +31,12 @@
     }
 
     &--1 {
-      top: -3rem;
-      left: 3rem;
+      top: 0;
+      left: 0;
 
       @include respond(tab-port) {
+        left: 3rem;
+        top: -3rem;
         transform: scale(1.1);
       }
     }
@@ -51,8 +53,13 @@
     }
 
     &--3 {
-      bottom: 8%;
+      bottom: 5%;
       left: 15%;
+
+      @include respond(tab-land) {
+        bottom: 8%;
+      }
+
       @include respond(tab-port) {
         top: 2rem;
         bottom: 0;
