@@ -2,9 +2,17 @@
   padding: 15rem 0;
   background-color: $color-gray-dark-1;
 
+  @include respond(tab-land) {
+    padding: 10rem 0;
+  }
+
   &__logo-box {
     text-align: center;
     margin-bottom: 9.6rem;
+
+    @include respond(tab-land) {
+      margin-bottom: 6.4rem;
+    }
   }
 
   &__logo {
@@ -16,27 +24,33 @@
   }
 
   &__copyright {
-    max-width: 40%;
+    max-width: 75%;
     border-top: 1px solid $color-gray-light-1;
     color: $color-white;
     padding: 1.6rem 1.6rem 0 1.6rem;
     font-size: 1.4rem;
+    margin-left: auto;
 
-    @include respond(phone) {
+    @include respond(tab-land) {
       max-width: 100%;
-      margin-top: 6.4rem;
+      margin-top: 4.8rem;
     }
   }
 
   &__nav {
     border-top: 1px solid $color-gray-light-1;
-    padding-top: 1.6rem;
+    padding-top: 1.2rem;
+    justify-self: start;
+
+    @include respond(tab-land) {
+      justify-self: stretch;
+    }
   }
 
   &__nav-list {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    justify-content: space-between;
 
     @include respond(phone) {
       gap: 0.6rem;
