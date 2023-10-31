@@ -375,7 +375,7 @@ body {
     font-size: 6.4rem;
     font-weight: 100;
     margin-bottom: 6.4rem; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
@@ -589,7 +589,8 @@ body {
     transition: all 0.6s 0.1s;
     transform: scale(0.1) translate(-50%, -50%);
     transform-origin: left;
-    width: 75%;
+    width: 80%;
+    height: 90vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -598,20 +599,49 @@ body {
     display: flex;
     border-radius: 3px;
     overflow: hidden; }
+    @media only screen and (max-width: 75em) {
+      .modal__box {
+        width: 90%; } }
+    @media only screen and (max-width: 56.25em) {
+      .modal__box {
+        flex-wrap: wrap; } }
   .modal__img-box {
-    flex-basis: 35%;
-    flex-shrink: 0; }
+    flex-basis: 40%;
+    flex-shrink: 0;
+    flex-grow: 0; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__img-box {
+        flex-basis: 100%;
+        display: flex;
+        max-height: 45%; } }
   .modal__img {
     display: block;
-    width: 100%; }
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__img {
+        width: 50%;
+        height: 100%;
+        align-self: flex-start; } }
   .modal__text-box {
-    padding: 4.8rem; }
+    padding: 0 3.6rem;
+    position: relative;
+    margin: auto 0; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__text-box {
+        padding: 0 2.4rem; } }
   .modal__text {
     font-size: 1.4rem;
     column-count: 2;
     column-gap: 3.6rem;
     column-rule: 1px solid #eee;
     hyphens: auto; }
+    @media only screen and (max-width: 56.25em) {
+      .modal__text {
+        font-size: 1.3rem;
+        column-gap: 2.4rem; } }
   .modal__close {
     position: absolute;
     width: 2.4rem;
