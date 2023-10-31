@@ -100,18 +100,26 @@
             <div class="grid-item composition">
               <img
                 class="composition__img composition__img--1"
-                src="img/nat-1-large.jpg"
                 alt="nature img"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large-jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                src="img/nat-1-large.jpg"
               />
+
               <img
                 class="composition__img composition__img--2"
-                src="img/nat-2-large.jpg"
                 alt="nature img"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                src="img/nat-2-large.jpg"
               />
+
               <img
                 class="composition__img composition__img--3"
-                src="img/nat-3-large.jpg"
                 alt="nature img"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                src="img/nat-3-large.jpg"
               />
             </div>
           </div>
@@ -378,11 +386,21 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__logo-box">
-          <img
-            class="footer__logo"
-            src="img/logo-green-2x.png"
-            alt="footer logo"
-          />
+          <picture class="footer__logo">
+            <source
+              media="(max-width: 37.5em)"
+              srcset="
+                img/logo-green-small-1x.png 1x,
+                img/logo-green-small-2x.png 2x
+              "
+            />
+
+            <img
+              srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+              alt="footer logo"
+              src="img/logo-green-1x.png"
+            />
+          </picture>
         </div>
         <div class="grid grid--2-cols">
           <nav class="footer__nav">
