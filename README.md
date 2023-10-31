@@ -8,4 +8,4 @@ This is a follow through project with udemy course by jonas schmedtmann.
 - Open index.html or run npm start on command prompt
 
 ## Checkout demo version on github
-<a href="https://www.mostafaei2002.github.io/natours">CLick here to see demo</a>
+[click here to see demo](https://mostafaei2002.github.io/natours/)
