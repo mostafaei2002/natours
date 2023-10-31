@@ -497,11 +497,10 @@ body {
     object-fit: cover; }
 
 .form {
-  height: 100%;
-  width: 100%; }
+  height: 100%; }
   .form__group {
     position: relative;
-    width: 75%; }
+    width: 100%; }
     .form__group:not(:last-child) {
       margin-bottom: 4.8rem; }
   .form__input {
@@ -514,6 +513,9 @@ body {
     width: 100%;
     border-radius: 2px;
     border-bottom: 3px solid transparent; }
+    @media (max-width: 56.25em) {
+      .form__input {
+        box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1); } }
     .form__input::placeholder {
       color: #999;
       font-size: 1.4rem; }
@@ -521,6 +523,9 @@ body {
       outline: none;
       border-bottom: 3px solid #55c57a;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
+      @media (max-width: 56.25em) {
+        .form__input:focus {
+          box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.15); } }
     .form__input:focus:invalid {
       border-bottom: 3px solid #ff7730; }
     .form__input-label {
@@ -992,14 +997,27 @@ body {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
   .section-form .form__box {
-    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url("../../img/nat-10.jpg");
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, transparent 55%), url("../../img/nat-10.jpg");
     background-size: cover;
     margin: 0 auto;
     border-radius: 3px;
     box-shadow: 0 2.4rem 5rem rgba(0, 0, 0, 0.2);
     width: 100%;
-    width: 55%;
     padding: 4.8rem 6.4rem; }
-    @media (max-width: 75em) {
+    @media (max-width: 56.25em) {
       .section-form .form__box {
-        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 55%, transparent 55%), url("../../img/nat-10.jpg"); } }
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.6) 100%), url("../../img/nat-10.jpg"); } }
+    @media (max-width: 37.5em) {
+      .section-form .form__box {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 100%), url("../../img/nat-10.jpg");
+        padding: 3.6rem 2.4rem; } }
+    .section-form .form__box .form {
+      width: 45%; }
+      @media (max-width: 56.25em) {
+        .section-form .form__box .form {
+          width: auto;
+          max-width: 40rem; } }
+      @media (max-width: 37.5em) {
+        .section-form .form__box .form {
+          max-width: 40rem;
+          width: 100%; } }
