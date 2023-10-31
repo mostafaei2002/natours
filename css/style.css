@@ -429,6 +429,13 @@ body {
   transform: skewX(-12deg);
   box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
   border-radius: 3px; }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 90%; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0);
+      padding: 4.8rem; } }
   .story:not(:last-child) {
     margin-bottom: 9.6rem; }
   .story::after {
@@ -444,6 +451,9 @@ body {
     float: left;
     position: relative;
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: skewX(0); } }
   .story__img {
     height: 100%;
     transition: all 0.5s;
@@ -462,6 +472,9 @@ body {
     transform: translate(-50%, 20%); }
   .story__text {
     transform: translateX(2rem) skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: translateX(2rem) skewX(0); } }
   .story:hover .story__author {
     opacity: 1;
     transform: translate(-50%, -50%); }
