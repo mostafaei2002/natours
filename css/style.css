@@ -435,7 +435,7 @@ body {
   @media (max-width: 37.5em) {
     .story {
       transform: skewX(0);
-      padding: 4.8rem; } }
+      padding: 3.6rem 2.4rem; } }
   .story:not(:last-child) {
     margin-bottom: 9.6rem; }
   .story::after {
@@ -453,7 +453,10 @@ body {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
       .story__shape {
-        transform: skewX(0); } }
+        transform: skewX(0);
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2.4rem; } }
   .story__img {
     height: 100%;
     transition: all 0.5s;
