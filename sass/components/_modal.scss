@@ -44,6 +44,11 @@
     @include respond(tab-port) {
       flex-wrap: wrap;
     }
+
+    @include respond(phone) {
+      width: 95%;
+      height: 95vh;
+    }
   }
 
   &__img-box {
@@ -92,6 +97,11 @@
     @include respond(tab-port) {
       font-size: 1.3rem;
       column-gap: 2.4rem;
+    }
+
+    @include respond(phone) {
+      column-count: 1;
+      font-size: 1.2rem;
     }
   }
 

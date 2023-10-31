@@ -605,6 +605,10 @@ body {
     @media only screen and (max-width: 56.25em) {
       .modal__box {
         flex-wrap: wrap; } }
+    @media only screen and (max-width: 37.5em) {
+      .modal__box {
+        width: 95%;
+        height: 95vh; } }
   .modal__img-box {
     flex-basis: 40%;
     flex-shrink: 0;
@@ -642,6 +646,10 @@ body {
       .modal__text {
         font-size: 1.3rem;
         column-gap: 2.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .modal__text {
+        column-count: 1;
+        font-size: 1.2rem; } }
   .modal__close {
     position: absolute;
     width: 2.4rem;
