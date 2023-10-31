@@ -328,7 +328,8 @@ body {
     .card__heading-span {
       padding: 1rem 1.5rem;
       -webkit-box-decoration-break: clone;
-      box-decoration-break: clone; }
+      box-decoration-break: clone;
+      text-align: right; }
       .card__heading-span--1 {
         background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
       .card__heading-span--2 {
@@ -409,6 +410,16 @@ body {
       .card__price {
         font-size: 4.8rem;
         margin-bottom: 2.4rem; } }
+  @media (max-width: 37.5em) {
+    .card__picture {
+      background-position: cover;
+      height: 23rem; }
+    .card__heading {
+      top: 16rem;
+      right: 1rem;
+      line-height: 1.7;
+      font-size: 2.4rem;
+      width: 50%; } }
 
 .story {
   padding: 6.4rem;
@@ -832,6 +843,9 @@ body {
   @media (max-width: 56.25em) {
     .container {
       padding: 0 4.8rem; } }
+  @media (max-width: 37.5em) {
+    .container {
+      padding: 0 2.4rem; } }
 
 .flex {
   display: flex; }
